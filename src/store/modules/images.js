@@ -39,7 +39,7 @@ const gallery = {
       return new Promise((resolve, reject) => {
         upload(images)
           .then(({ data }) => {
-            commit('INSERT_IMAGES', data.success)
+            commit('INSERT_IMAGES', data.successes)
             resolve([data])
           })
           .catch(error => reject(error))
